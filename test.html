@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    let str = new String("ほげ");
+    console.log(str);
+    console.log(typeof str);
+    let str2="ふが";
+    console.log(str2);
+    console.log(typeof str2);
+
+    let array1;
+    array1 = ['a', 'b', 'c'];
+    let iterator = array1.entries();
+
+    for (let key of iterator) {
+        console.log(key); // expected output: 0 1 2
+    }
+    // コールバック
+
+    array1.forEach(function (value,index,array2) {
+        console.log(value + '  ' + index);
+        console.log(array2);
+
+    })
+
+
+    let lists = [
+
+        { name: 'バナナ', price: '100' },
+        { name: 'リンゴ', price: '200' },
+        { name: 'メロン', price: '400' },
+        { name: 'ブドウ', price: '250' },
+
+    ];
+    array2 = ['a', 'b', 'c'];
+    array2.forEach( function( value ) {
+
+        console.log( value );
+
+    });
+    lists.forEach( value => {
+
+        console.log( value.name );
+
+    });
+    let comparefn = function ( valueA, valueB ) {
+        if( valueA > valueB ) {
+            return 1 ;
+
+        } else if( valueA < valueB ) {
+            return -1 ;
+
+        } else {
+            return 0 ;
+
+        }
+    }
+
+    let a = [ 8, 11, 3, 40 ].sort( comparefn ) ;
+    let b = [ "S", "Y", "N", "C", "E", "R", ].sort() ;
+    console.log(a);
+
+
+</script>
+<noscript>
+    JS利用できません
+</noscript>
+</body>
+</html>
